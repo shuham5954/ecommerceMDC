@@ -22,28 +22,23 @@ export const home: Routes = [
            
             { 
                 path: 'cart-main', 
-                loadComponent: () => import('../../header/header/cart-main/cart-main.component').then(c => c.CartMainComponent) ,
-                pathMatch:'full'
+                loadComponent: () => import('../../header/header/cart-main/cart-main.component').then(c => c.CartMainComponent)
             },
             { 
                 path: 'check-out-cart', 
-                loadComponent: () => import('../../header/header/check-out-cart/check-out-cart.component').then(c => c.CheckOutCartComponent) ,
-                pathMatch:'full'
+                loadComponent: () => import('../../header/header/check-out-cart/check-out-cart.component').then(c => c.CheckOutCartComponent)
             },
             { 
                 path: 'payment-cart', 
-                loadComponent: () => import('../../header/header/payment-cart/payment-cart.component').then(c => c.PaymentCartComponent) ,
-                pathMatch:'full'
+                loadComponent: () => import('../../header/header/payment-cart/payment-cart.component').then(c => c.PaymentCartComponent)
             },
             { 
                 path: 'user-profile', 
-                loadComponent: () => import('../../header/header/user-profile/user-profile.component').then(c => c.UserProfileComponent) ,
-                pathMatch: 'full'
+                loadComponent: () => import('../../header/header/user-profile/user-profile.component').then(c => c.UserProfileComponent)
             },
             { 
                 path: 'wish-list', 
-                loadComponent: () => import('../../header/header/wish-list/wish-list.component').then(c => c.WishListComponent) ,
-                pathMatch:'full'
+                loadComponent: () => import('../../header/header/wish-list/wish-list.component').then(c => c.WishListComponent) 
             }
         ]
     }
