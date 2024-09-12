@@ -2,17 +2,16 @@ import { Routes } from "@angular/router";
 
 
 export const home: Routes = [
-    { 
-        path: '', 
-        redirectTo: 'products', 
-        pathMatch: 'full' 
-    },
+    // { 
+    //     path: '', 
+    //     redirectTo: 'user-profiles', 
+    //     pathMatch: 'full' 
+    // },
     {
         path: 'products',
-        loadComponent: () => import('./home.component').then(c => c.HomeComponent)   ,
         children: [
             { 
-                path: '', 
+                path: 'home-products', 
                 loadComponent: () => import('./home-products/home-products.component').then(c => c.HomeProductsComponent) 
             },
             { 
@@ -24,30 +23,35 @@ export const home: Routes = [
     {
         path: 'user-profiles',
         children: [ 
-            { 
-                path: '', 
-                redirectTo: 'cart-main', 
-                pathMatch: 'full'
-            },
+            // { 
+            //     path: '', 
+            //     redirectTo: 'cart-main',
+            //     pathMatch: 'full'
+            // },
             { 
                 path: 'cart-main', 
-                loadComponent: () => import('../../header/header/cart-main/cart-main.component').then(c => c.CartMainComponent) 
+                loadComponent: () => import('../../header/header/cart-main/cart-main.component').then(c => c.CartMainComponent) ,
+                pathMatch:'full'
             },
             { 
                 path: 'check-out-cart', 
-                loadComponent: () => import('../../header/header/check-out-cart/check-out-cart.component').then(c => c.CheckOutCartComponent) 
+                loadComponent: () => import('../../header/header/check-out-cart/check-out-cart.component').then(c => c.CheckOutCartComponent) ,
+                pathMatch:'full'
             },
             { 
                 path: 'payment-cart', 
-                loadComponent: () => import('../../header/header/payment-cart/payment-cart.component').then(c => c.PaymentCartComponent) 
+                loadComponent: () => import('../../header/header/payment-cart/payment-cart.component').then(c => c.PaymentCartComponent) ,
+                pathMatch:'full'
             },
             { 
                 path: 'user-profile', 
-                loadComponent: () => import('../../header/header/user-profile/user-profile.component').then(c => c.UserProfileComponent) 
+                loadComponent: () => import('../../header/header/user-profile/user-profile.component').then(c => c.UserProfileComponent) ,
+                pathMatch: 'full'
             },
             { 
                 path: 'wish-list', 
-                loadComponent: () => import('../../header/header/wish-list/wish-list.component').then(c => c.WishListComponent) 
+                loadComponent: () => import('../../header/header/wish-list/wish-list.component').then(c => c.WishListComponent) ,
+                pathMatch:'full'
             }
         ]
     }
