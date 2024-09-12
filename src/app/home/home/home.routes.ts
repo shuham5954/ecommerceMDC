@@ -2,11 +2,7 @@ import { Routes } from "@angular/router";
 
 
 export const home: Routes = [
-    // { 
-    //     path: '', 
-    //     redirectTo: 'user-profiles', 
-    //     pathMatch: 'full' 
-    // },
+    
     {
         path: 'products',
         children: [
@@ -23,11 +19,7 @@ export const home: Routes = [
     {
         path: 'user-profiles',
         children: [ 
-            // { 
-            //     path: '', 
-            //     redirectTo: 'cart-main',
-            //     pathMatch: 'full'
-            // },
+           
             { 
                 path: 'cart-main', 
                 loadComponent: () => import('../../header/header/cart-main/cart-main.component').then(c => c.CartMainComponent) ,
