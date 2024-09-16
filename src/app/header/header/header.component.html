@@ -1,5 +1,5 @@
 
-<div class=" w[100vw]  h-auto justify-center items-center flex flex-row">
+<div class=" w[100vw]  h-auto justify-between items-center flex flex-row">
 
     <!-- left logo  -->
     
@@ -19,24 +19,21 @@
 
 <!-- mid search bar  -->
 
-
-<form  class="max-w-md mx-auto">
-    <div class="flex">
-        <div class="relative w-full">
-            <input type="search" id="location-search" class=" rounded-md block text-white p-2.5 w-full z-20 text-sm bg-[#001C30] rounded-e-lg " required />
-            <button type="submit" class="absolute top-0 end-0 h-full p-2.5 text-sm font-medium text-white rounded-e-lg bg-[#001C30]">
-                <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 20 20">
-                    <path stroke="#9BCDD2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
-                </svg>
-            </button>
-        </div>
+<div class="flex justify-center items-center w-full my-4">
+    <div class="flex items-center space-x-2 bg-[#001C30] rounded-md p-2 w-3/4">
+      <input type="text" placeholder="Search..." class="w-full text-white p-2 bg-transparent focus:outline-none">
+      <button class="text-blue-500">
+        <svg class="h-6 w-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+            <path stroke="#9BCDD2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+          </svg>
+      </button>
     </div>
-</form>
-
+  </div>
+  
 
 <!-- right side option card wishList userProfile -->
 
-<div class="hidden sm:flex justify-between items-center flex flex-row  ">
+<div class="hidden sm:flex justify-between items-center flex flex-row">
 
 
     <!-- wishList icon  -->
@@ -46,13 +43,13 @@
 
         <!-- cart icon  -->
 
-        <svg class="mr-0 ml-2 md:h-7 lg:h-10 "  viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="mr-0 ml-2 md:h-5 lg:h-10 "  viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M17 15C17.5304 15 18.0391 15.1756 18.4142 15.4881C18.7893 15.8007 19 16.2246 19 16.6666C19 17.1087 18.7893 17.5326 18.4142 17.8451C18.0391 18.1577 17.5304 18.3333 17 18.3333C16.4696 18.3333 15.9609 18.1577 15.5858 17.8451C15.2107 17.5326 15 17.1087 15 16.6666C15 15.7416 15.89 15 17 15ZM1 1.66663H4.27L5.21 3.33329H20C20.2652 3.33329 20.5196 3.42109 20.7071 3.57737C20.8946 3.73365 21 3.94561 21 4.16663C21 4.30829 20.95 4.44996 20.88 4.58329L17.3 9.97496C16.96 10.4833 16.3 10.8333 15.55 10.8333H8.1L7.2 12.1916L7.17 12.2916C7.17 12.3469 7.19634 12.3999 7.24322 12.4389C7.29011 12.478 7.3537 12.5 7.42 12.5H19V14.1666H7C6.46957 14.1666 5.96086 13.991 5.58579 13.6785C5.21071 13.3659 5 12.942 5 12.5C5 12.2083 5.09 11.9333 5.24 11.7L6.6 9.65829L3 3.33329H1V1.66663ZM7 15C7.53043 15 8.03914 15.1756 8.41421 15.4881C8.78929 15.8007 9 16.2246 9 16.6666C9 17.1087 8.78929 17.5326 8.41421 17.8451C8.03914 18.1577 7.53043 18.3333 7 18.3333C6.46957 18.3333 5.96086 18.1577 5.58579 17.8451C5.21071 17.5326 5 17.1087 5 16.6666C5 15.7416 5.89 15 7 15ZM16 9.16663L18.78 4.99996H6.14L8.5 9.16663H16Z" fill="#001C30"/>
             </svg>
 
             <!-- user profile icon  -->
 
-            <svg class="md:h-11 lg:h-11"  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="md:h-6 lg:h-11"  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M12 4C13.0609 4 14.0783 4.42143 14.8284 5.17157C15.5786 5.92172 16 6.93913 16 8C16 9.06087 15.5786 10.0783 14.8284 10.8284C14.0783 11.5786 13.0609 12 12 12C10.9391 12 9.92172 11.5786 9.17157 10.8284C8.42143 10.0783 8 9.06087 8 8C8 6.93913 8.42143 5.92172 9.17157 5.17157C9.92172 4.42143 10.9391 4 12 4ZM12 6C11.4696 6 10.9609 6.21071 10.5858 6.58579C10.2107 6.96086 10 7.46957 10 8C10 8.53043 10.2107 9.03914 10.5858 9.41421C10.9609 9.78929 11.4696 10 12 10C12.5304 10 13.0391 9.78929 13.4142 9.41421C13.7893 9.03914 14 8.53043 14 8C14 7.46957 13.7893 6.96086 13.4142 6.58579C13.0391 6.21071 12.5304 6 12 6ZM12 13C14.67 13 20 14.33 20 17V20H4V17C4 14.33 9.33 13 12 13ZM12 14.9C9.03 14.9 5.9 16.36 5.9 17V18.1H18.1V17C18.1 16.36 14.97 14.9 12 14.9Z" fill="#001C30"/>
                 </svg>
                 
@@ -61,6 +58,16 @@
 </div>
 
 
+<!-- vector three line mobile screen menu  -->
+
+<div class="">
+
+    <svg width="25" height="20" viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 1.30435C0 0.958413 0.141103 0.626647 0.392268 0.382034C0.643433 0.137422 0.984085 0 1.33929 0H23.6607C24.0159 7.29003e-09 24.3566 0.137422 24.6077 0.382034C24.8589 0.626647 25 0.958413 25 1.30435C25 1.65028 24.8589 1.98205 24.6077 2.22666C24.3566 2.47127 24.0159 2.6087 23.6607 2.6087H1.33929C0.984085 2.6087 0.643433 2.47127 0.392268 2.22666C0.141103 1.98205 0 1.65028 0 1.30435ZM0 10C0 9.65407 0.141103 9.3223 0.392268 9.07769C0.643433 8.83307 0.984085 8.69565 1.33929 8.69565H12.5H23.6607C24.0159 8.69565 24.3566 8.83307 24.6077 9.07769C24.8589 9.3223 25 9.65407 25 10C25 10.3459 24.8589 10.6777 24.6077 10.9223C24.3566 11.1669 24.0159 11.3043 23.6607 11.3043H12.5H1.33929C0.984085 11.3043 0.643433 11.1669 0.392268 10.9223C0.141103 10.6777 0 10.3459 0 10ZM1.33929 17.3913H23.6607C24.0159 17.3913 24.3566 17.5287 24.6077 17.7733C24.8589 18.018 25 18.3497 25 18.6957C25 19.0416 24.8589 19.3734 24.6077 19.618C24.3566 19.8626 24.0159 20 23.6607 20H1.33929C0.984085 20 0.643433 19.8626 0.392268 19.618C0.141103 19.3734 0 19.0416 0 18.6957C0 18.3497 0.141103 18.018 0.392268 17.7733C0.643433 17.5287 0.984085 17.3913 1.33929 17.3913Z" fill="#9BCDD2"/>
+        </svg>
+        
+
+</div>
 
 
 </div>
