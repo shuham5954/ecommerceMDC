@@ -2,9 +2,21 @@ import { Routes } from "@angular/router";
 
 export const home: Routes = [
     
+    
+    { 
+        path: '', 
+        redirectTo: 'products', 
+        pathMatch: 'full' 
+    },
+    
     {
         path: 'products',
         children: [
+            { 
+                path: '', 
+                redirectTo: 'home-products', 
+                pathMatch: 'full' 
+            },
             { 
                 path: 'home-products', 
                 loadComponent: () => import('./home-products/home-products.component').then(c => c.HomeProductsComponent) 

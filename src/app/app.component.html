@@ -1,8 +1,11 @@
 
 <app-header></app-header>
-<app-nav-bar></app-nav-bar>
+<div class="flex">
 
-<router-outlet></router-outlet>
+    <app-nav-bar></app-nav-bar>
+    
+    <router-outlet></router-outlet>
+</div>
 
 <!-- <button [routerLink]="['home/products/home-products']" routerLinkActive="router-link-active" >click</button> -->
-<button [routerLink]="['/home/products/home-products']" routerLinkActive="router-link-active">click</button>
+<!-- <button [routerLink]="['/home/products/home-products']" routerLinkActive="router-link-active">click</button> -->
