@@ -1,19 +1,22 @@
 @media screen and (max-width: 767px) {
-    .mobile-screen{
-        display: flex;
-        position: sticky !important;
-        bottom: 0 !important;
-    }
+  .mobile-screen{
+      display: flex;
+      position: absolute;
+      bottom: 5px !important;
+      width: 100vw;
   }
+}
 
-  @media screen and (min-width: 768px) and (max-width: 1024px) {
-    .tablate-screen{
-        display: flex;
-    }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .tablate-screen{
+      display: flex;
+      height: 70vh ;
   }
+}
 
-  @media screen and (min-width: 1025px) {
-    .desktop-screen{
-        display: flex;
-    }
+@media screen and (min-width: 1025px) {
+  .desktop-screen{
+      display: flex;
+      height: 80vh;
+  }
 }
