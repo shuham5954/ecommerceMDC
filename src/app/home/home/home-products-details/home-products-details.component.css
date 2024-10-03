@@ -1,0 +1,17 @@
+.hide-scroll-bar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .hide-scroll-bar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .products-details-scroll-custome{
+    /* height: 500px; */
+    width: 100vw;
+  }
+
+  .custome-img{
+    height: 200px;
+    width: 100px;
+  }

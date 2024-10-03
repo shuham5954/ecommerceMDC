@@ -1,46 +1,72 @@
-
-<!-- mobile-owl-carresol  -->
-<owl-carousel-o [options]="customOptions">
-
-  <ng-container *ngFor="let slide of slidesStore">
-    <ng-template carouselSlide [id]="slide.id">
-      <img [src]="slide.src" [alt]="slide.alt" [title]="slide.title">
-    </ng-template>
-  </ng-container>
-
-</owl-carousel-o>
+<!-- main container products -->
+<div class="flex-col justify-items-center items-center w-full">
 
 
-<!-- mobile screen men-women toggle  -->
-<div class="w-full text-white side-toggle-men-women hidden rounded-[20px]">
+  <!-- mobile screen men-women toggle  -->
+<div class="w-full mb-3 text-white side-toggle-men-women hidden rounded-[20px]">
   <div class="relative right-0">
     <ul class="relative flex flex-wrap px-1.5 py-1.5 list-none rounded-md rounded-[25px] bg-[#9BCDD2]" data-tabs="tabs" role="list">
       <li class="z-30 flex-auto rounded-[25px] text-center bg-[#001C30] ">
         <a class="z-30 flex items-center justify-center w-full px-0 py-2 text-sm mb-0 transition-all ease-in-out border-0 rounded-md cursor-pointer text-white "
         data-tab-target="" role="tab" aria-selected="true">
-          Dashboard
+          Man
         </a>
       </li>
       <li class="z-30 flex-auto text-center">
         <a class="z-30 flex items-center justify-center w-full px-0 py-2 mb-0 text-sm transition-all ease-in-out border-0 rounded-lg cursor-pointer text-white "
         data-tab-target="" role="tab" aria-selected="false">
-          Profile
+          Woman
         </a>
       </li>
     </ul>
   </div>
 </div> 
 
+
+  
+  <!-- mobile-owl-carresol  -->
+  
+ <div class="owl-car-parent-div-custome md:hidden m-auto">
+
+   <div class="custome-css-owl-carousel ">
+     
+     
+     <owl-carousel-o [options]="customOptions">
+       
+       <ng-container  *ngFor="let slide of slidesStore">
+         <ng-template  carouselSlide [id]="slide.id">
+           <img class="carousel-image image-custom rounded-[15px]" [src]="slide.src" [alt]="slide.alt" [title]="slide.title">
+          </ng-template>
+        </ng-container>
+
+      </owl-carousel-o>
+      
+    </div>
+</div>
+
+
+
 <!-- main products scroll bar  -->
 
-<div class="overflow-x-auto h-[79vh]">
+<div class="overflow-x-auto h-[79vh] p-[2px] ">
 
 
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-2">
-  <div>
-      <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" alt="">
+<div class="grid grid-cols-2  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-2">
+  <div class="flex-col p-1 rounded-[10px] bg-[#9BCDD2]">
+      <img class="h-auto max-w-full rounded-lg" src="https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+      <p class="font-bold my-3 text-[10] leading-[1.2]">Tissot Analog Watch Lorem, ipsum dolor.</p>
+      <p class="text-[10px]">ANALOG WATCH</p>
+      <div class="flex flex-row-reverse items-center">
+        <p class=""> 1400</p>
+        <p class="text-[20px]">₹ </p>
+        
+
+      </div>
+
   </div>
-  <div>
+
+
+  <!-- <div>
       <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg" alt="">
   </div>
   <div>
@@ -72,6 +98,8 @@
 </div>
 <div>
   <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg" alt="">
+</div> -->
+
 </div>
 
 </div>

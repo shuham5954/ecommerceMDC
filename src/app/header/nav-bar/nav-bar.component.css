@@ -1,7 +1,7 @@
 @media screen and (max-width: 767px) {
   .mobile-screen{
       display: flex;
-      position: absolute;
+      position: fixed;
       bottom: 5px !important;
       width: 100vw;
   }

@@ -2,4 +2,19 @@
     .side-toggle-men-women{
         display: block;
     }
+    .mobile-screen{
+      display: flex;
+      }
+
+    
   }
+
+.owl-car-parent-div-custome{
+  width: 90vw;
+}
+
+.image-custom{
+  height:300px;
+}
+
+  
