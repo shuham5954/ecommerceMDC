@@ -5,7 +5,7 @@ export const home: Routes = [
     
     { 
         path: '', 
-        redirectTo: 'products', 
+        redirectTo: 'user-profiles', 
         pathMatch: 'full' 
     },
     
@@ -30,6 +30,10 @@ export const home: Routes = [
     {
         path: 'user-profiles',
         children: [ 
+            {path:'' , 
+                redirectTo:'cart-main',
+                pathMatch:'full'
+            } ,
            
             { 
                 path: 'cart-main', 
