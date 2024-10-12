@@ -31,7 +31,7 @@ export const home: Routes = [
         path: 'user-profiles',
         children: [ 
             {path:'' , 
-                redirectTo:'check-out-cart',
+                redirectTo:'wish-list',
                 pathMatch:'full'
             } ,
            
