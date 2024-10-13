@@ -50,7 +50,7 @@ export const home: Routes = [
                 path: 'user-profile', 
                 loadComponent: () => import('../../header/header/user-profile/user-profile.component').then(c => c.UserProfileComponent),
                 children:[
-                    {path:'' , redirectTo:'my-profile' , pathMatch:"full"},
+                    {path:'' , redirectTo:'my-order' , pathMatch:"full"},
                     {
                          path:"my-profile" , loadComponent: () => import('../../header/header/user-profile/my-profile-card-user-profile/my-profile-card-user-profile.component').then(c=>c.MyProfileCardUserProfileComponent)
                     } ,
