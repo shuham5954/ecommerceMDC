@@ -2,7 +2,6 @@ import { Routes } from "@angular/router";
 
 export const home: Routes = [
     
-    
     { 
         path: '', 
         redirectTo: 'user-profiles', 
@@ -31,7 +30,7 @@ export const home: Routes = [
         path: 'user-profiles',
         children: [ 
             {path:'' , 
-                redirectTo:'wish-list',
+                redirectTo:'user-profile',
                 pathMatch:'full'
             } ,
            
