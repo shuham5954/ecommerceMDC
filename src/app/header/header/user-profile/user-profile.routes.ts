@@ -1,8 +1,10 @@
 import { Routes } from "@angular/router";
+import path from "node:path";
 
 
 
 export const home:Routes = [
+    {path:'',redirectTo:"my-profile" , pathMatch:'full'},
 
          {path:"my-profile" , loadComponent: () => import('./my-profile-card-user-profile/my-profile-card-user-profile.component').then(c =>c.MyProfileCardUserProfileComponent ) , pathMatch:'full'} , 
          {path:"my-order" , loadComponent: () => import('./my-ordes-card-user-profile/my-ordes-card-user-profile.component').then(c =>c.MyOrdesCardUserProfileComponent ) , pathMatch:'full'} , 

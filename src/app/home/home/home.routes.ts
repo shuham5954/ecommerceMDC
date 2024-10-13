@@ -48,7 +48,18 @@ export const home: Routes = [
             },
             { 
                 path: 'user-profile', 
-                loadComponent: () => import('../../header/header/user-profile/user-profile.component').then(c => c.UserProfileComponent)
+                loadComponent: () => import('../../header/header/user-profile/user-profile.component').then(c => c.UserProfileComponent),
+                children:[
+                    {path:'' , redirectTo:'my-profile' , pathMatch:"full"},
+                    {
+                         path:"my-profile" , loadComponent: () => import('../../header/header/user-profile/my-profile-card-user-profile/my-profile-card-user-profile.component').then(c=>c.MyProfileCardUserProfileComponent)
+                    } ,
+                    {path:"my-order" , loadComponent: () => import('../../header/header/user-profile/my-ordes-card-user-profile/my-ordes-card-user-profile.component').then(c =>c.MyOrdesCardUserProfileComponent ) , pathMatch:'full'} , 
+                    {path:"my-payments" , loadComponent: () => import('../../header/header/user-profile/my-payment-card-user-profile/my-payment-card-user-profile.component').then(c =>c.MyPaymentCardUserProfileComponent ) , pathMatch:'full'} , 
+                    {path:"my-addresses" , loadComponent: () => import('../../header/header/user-profile/my-addresses-card-user-profile/my-addresses-card-user-profile.component').then(c =>c.MyAddressesCardUserProfileComponent ) , pathMatch:'full'} , 
+                    {path:"my-help-center" , loadComponent: () => import('../../header/header/user-profile/help-center-card-user-profile/help-center-card-user-profile.component').then(c =>c.HelpCenterCardUserProfileComponent ) , pathMatch:'full'} , 
+           
+                ]
             },
             { 
                 path: 'wish-list', 
