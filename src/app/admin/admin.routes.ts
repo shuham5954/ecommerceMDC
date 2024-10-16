@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 
 export const admin: Routes = [
     { 
-        path: '', redirectTo: 'admin-dashboard', pathMatch: 'full' 
+        path: '', redirectTo: 'admin-add-product', pathMatch: 'full' 
 
     },
     {
@@ -10,7 +10,7 @@ export const admin: Routes = [
         loadComponent: () => import('./admin-dashboard/admin-dashboard.component').then(c => c.AdminDashboardComponent)
     },
     {
-        path:'admin-product' ,
+        path:'admin-add-product' ,
         loadComponent: () => import('./admin-add-product/admin-add-product.component').then(c => c.AdminAddProductComponent)
     },
     {
