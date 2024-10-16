@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 
 export const admin: Routes = [
     { 
-        path: '', redirectTo: 'admin-add-product', pathMatch: 'full' 
+        path: '', redirectTo: 'admin-orders', pathMatch: 'full' 
 
     },
     {
@@ -15,7 +15,7 @@ export const admin: Routes = [
     },
     {
         path:'admin-orders' ,
-        loadComponent: () => import('./admin-products/admin-products.component').then(c => c.AdminProductsComponent)
+        loadComponent: () => import('./admin-orders/admin-orders.component').then(c => c.AdminOrdersComponent)
     },
     {
         path:'admin-payments' ,
