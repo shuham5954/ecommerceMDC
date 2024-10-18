@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 
 export const admin: Routes = [
     { 
-        path: '', redirectTo: 'admin-profile', pathMatch: 'full' 
+        path: '', redirectTo: 'admin-add-product', pathMatch: 'full' 
 
     },
     {

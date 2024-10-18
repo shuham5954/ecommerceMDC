@@ -1,71 +1,79 @@
-<div class="h-[80vh] w-[90vw]  flex">
+<div class="md:h-[80vh] md:w-[90vw] w-[100vw] md:flex md:flex-row flex flex-col overflow-y-auto  justify-between items-center">
 
-    <!-- upload section  -->
-    <div class="h-full flex flex-col justify-around items-center w-[40vw] bg-white">
-        <div class=" h-[30vh] w-[20vw] flex flex-col  justify-center items-center rounded-[15px] bg-[#001C30]">
+  <!-- Upload section -->
+  <div class="h-full flex flex-col justify-between items-center md:w-[40vw] w-full bg-white py-8">
 
-        <div class="">
-            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M44 24C44 22.8954 43.1046 22 42 22C40.8954 22 40 22.8954 40 24H44ZM24 8C25.1046 8 26 7.10457 26 6C26 4.89543 25.1046 4 24 4V8ZM39 40H9V44H39V40ZM8 39V9H4V39H8ZM40 24V39H44V24H40ZM9 8H24V4H9V8ZM9 40C8.44772 40 8 39.5523 8 39H4C4 41.7614 6.23857 44 9 44V40ZM39 44C41.7614 44 44 41.7614 44 39H40C40 39.5523 39.5523 40 39 40V44ZM8 9C8 8.44772 8.44771 8 9 8V4C6.23858 4 4 6.23857 4 9H8Z" fill="#9BCDD2"/>
-                <path d="M6 34.9999L16.6931 25.1979C17.4389 24.5142 18.5779 24.4952 19.3461 25.1537L32 35.9999" stroke="#9BCDD2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M28 31L32.7735 26.2265C33.4772 25.5228 34.5914 25.4436 35.3877 26.0408L42 31" stroke="#9BCDD2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M37 18V6" stroke="#9BCDD2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M32 11L37 6L42 11" stroke="#9BCDD2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        </div>
-
-                <div>
-                   <p class="text-[#9BCDD2]">Upload Images</p> 
-                </div>
-        </div>
-
-        <div class="h-[30vh] w-[20vw] flex flex-col  justify-center items-center rounded-[15px] bg-[#001C30]">
-            <div class="">
-
-                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M32 8C32.5304 8 33.0391 8.21071 33.4142 8.58579C33.7893 8.96086 34 9.46957 34 10V18.4L44.426 11.1C44.5759 10.9949 44.7518 10.933 44.9345 10.921C45.1172 10.909 45.2997 10.9474 45.462 11.032C45.6244 11.1166 45.7604 11.2441 45.8553 11.4007C45.9502 11.5573 46.0002 11.7369 46 11.92V36.08C46.0002 36.2631 45.9502 36.4427 45.8553 36.5993C45.7604 36.7559 45.6244 36.8834 45.462 36.968C45.2997 37.0526 45.1172 37.091 44.9345 37.079C44.7518 37.067 44.5759 37.0051 44.426 36.9L34 29.6V38C34 38.5304 33.7893 39.0391 33.4142 39.4142C33.0391 39.7893 32.5304 40 32 40H4C3.46957 40 2.96086 39.7893 2.58579 39.4142C2.21071 39.0391 2 38.5304 2 38V10C2 9.46957 2.21071 8.96086 2.58579 8.58579C2.96086 8.21071 3.46957 8 4 8H32ZM30 12H6V36H30V12ZM18 16L26 24H20V32H16V24H10L18 16ZM42 17.682L34 23.282V24.718L42 30.318V17.682Z" fill="#9BCDD2"/>
-                </svg>
-                
-            </div>
-
-            <div>
-                <p class="text-[#9BCDD2]">Upload Videos</p>
-            </div>
-
-        </div>
-
-    </div>
-
-    <!-- right side details  -->
-     <div class="h-full w-[50vw]">
-<div class="flex items-center justify-center h-full">
-  <div class="bg-gray-900 p-8 rounded-lg shadow-lg w-full">
-    <h2 class="text-lg font-semibold text-teal-300 mb-4">Product Details</h2>
-    <form class="space-y-4">
-      <div class="grid grid-cols-2 gap-4">
-        <input type="text" placeholder="Name" class="p-2 rounded-md bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-teal-500">
-        <input type="text" placeholder="Title" class="p-2 rounded-md bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-teal-500">
-        <input type="text" placeholder="Price" class="p-2 rounded-md bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-teal-500">
-        <input type="text" placeholder="Brand" class="p-2 rounded-md bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-teal-500">
-        <select class="p-2 rounded-md bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-teal-500">
-          <option>Category</option>
-        </select>
-        <select class="p-2 rounded-md bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-teal-500">
-          <option>Size</option>
-        </select>
-        <select class="p-2 rounded-md bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-teal-500">
-          <option>Color</option>
-        </select>
+      <!-- Image Upload -->
+      <div class="h-[30vh] md:w-[20vw] w-[90vw] md:my-0 my-3 flex flex-col justify-center items-center rounded-lg bg-[#001C30] p-4">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M44 24C44 22.8954 43.1046 22 42 22C40.8954 22 40 22.8954 40 24H44ZM24 8C25.1046 8 26 7.10457 26 6C26 4.89543 25.1046 4 24 4V8ZM39 40H9V44H39V40ZM8 39V9H4V39H8ZM40 24V39H44V24H40ZM9 8H24V4H9V8ZM9 40C8.44772 40 8 39.5523 8 39H4C4 41.7614 6.23857 44 9 44V40ZM39 44C41.7614 44 44 41.7614 44 39H40C40 39.5523 39.5523 40 39 40V44ZM8 9C8 8.44772 8.44771 8 9 8V4C6.23858 4 4 6.23857 4 9H8Z" fill="#9BCDD2"/>
+              <path d="M6 34.9999L16.6931 25.1979C17.4389 24.5142 18.5779 24.4952 19.3461 25.1537L32 35.9999" stroke="#9BCDD2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M28 31L32.7735 26.2265C33.4772 25.5228 34.5914 25.4436 35.3877 26.0408L42 31" stroke="#9BCDD2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M37 18V6" stroke="#9BCDD2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M32 11L37 6L42 11" stroke="#9BCDD2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <p class="mt-4 text-[#9BCDD2] text-lg">Upload Images</p>
       </div>
-      <textarea placeholder="Product Description" class="p-2 w-full h-24 rounded-md bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-teal-500"></textarea>
-      <button type="submit" class="w-full bg-teal-400 text-gray-900 py-2 rounded-md hover:bg-teal-500 transition">Upload</button>
-    </form>
+
+      <!-- Video Upload -->
+      <div class="h-[30vh] md:w-[20vw] w-[90vw] md:my-0 my-3 flex flex-col justify-center items-center rounded-lg bg-[#001C30] p-4">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M32 8C32.5304 8 33.0391 8.21071 33.4142 8.58579C33.7893 8.96086 34 9.46957 34 10V18.4L44.426 11.1C44.5759 10.9949 44.7518 10.933 44.9345 10.921C45.1172 10.909 45.2997 10.9474 45.462 11.032C45.6244 11.1166 45.7604 11.2441 45.8553 11.4007C45.9502 11.5573 46.0002 11.7369 46 11.92V36.08C46.0002 36.2631 45.9502 36.4427 45.8553 36.5993C45.7604 36.7559 45.6244 36.8834 45.462 36.968C45.2997 37.0526 45.1172 37.091 44.9345 37.079C44.7518 37.067 44.5759 37.0051 44.426 36.9L34 29.6V38C34 38.5304 33.7893 39.0391 33.4142 39.4142C33.0391 39.7893 32.5304 40 32 40H4C3.46957 40 2.96086 39.7893 2.58579 39.4142C2.21071 39.0391 2 38.5304 2 38V10C2 9.46957 2.21071 8.96086 2.58579 8.58579C2.96086 8.21071 3.46957 8 4 8H32ZM30 12H6V36H30V12ZM18 16L26 24H20V32H16V24H10L18 16ZM42 17.682L34 23.282V24.718L42 30.318V17.682Z" fill="#9BCDD2"/>
+          </svg>
+          <p class="mt-4 text-[#9BCDD2] text-lg">Upload Videos</p>
+      </div>
+
   </div>
-</div>
 
+  <!-- Right side modal/details section -->
+  <div class="h-full md:w-[50vw] w-[95vw] flex items-center justify-center">
+      <!-- Modal -->
+      <div id="defaultModal" class="p-3 w-full max-w-2xl bg-[#001c30] rounded-lg shadow-md">
+          <div class="flex justify-between items-center pb-4 mb-1 border-b">
+              <h3 class="text-lg font-semibold text-[#9BCDD2]">Product Details</h3>
+              
+          </div>
 
+          <!-- Form inside modal -->
+          <form>
+              <div class="grid gap-4 mb-4 sm:grid-cols-2">
+                  <div>
+                      <label for="name" class="block mb-2 text-sm text-[#9BCDD2] font-medium">Name</label>
+                      <input type="text" id="name" class="w-full p-1 rounded-lg bg-gray-50 border border-gray-300" placeholder="Product name">
+                  </div>
+                  <div>
+                      <label for="brand" class="block mb-2 text-sm font-medium text-[#9BCDD2]">Title</label>
+                      <input type="text" id="brand" class="w-full p-1 rounded-lg bg-gray-50 border border-gray-300" placeholder="Product brand">
+                  </div>
+                  <div>
+                      <label for="brand" class="block mb-2 text-sm font-medium text-[#9BCDD2]">Brand</label>
+                      <input type="text" id="brand" class="w-full p-1 rounded-lg bg-gray-50 border border-gray-300" placeholder="Product brand">
+                  </div>
+                  <div>
+                      <label for="price" class="block mb-2 text-sm font-medium text-[#9BCDD2]">Price</label>
+                      <input type="number" id="price" class="w-full p-1 rounded-lg bg-gray-50 border border-gray-300" placeholder="$2999">
+                  </div>
+                  <div>
+                      <label for="category" class="block mb-2 text-sm font-medium text-[#9BCDD2]">Category</label>
+                      <select id="category" class="w-full p-1 rounded-lg bg-gray-50 border border-gray-300">
+                          <option>Select category</option>
+                          <option>TV/Monitors</option>
+                          <option>PC</option>
+                          <option>Gaming/Console</option>
+                          <option>Phones</option>
+                      </select>
+                  </div>
 
-     </div>
-
+                  <div class="sm:col-span-2">
+                      <label for="description" class="block mb-1 text-sm font-medium text-[#9BCDD2]">Description</label>
+                      <textarea id="description" rows="2" class="w-full p-1 rounded-lg bg-gray-50 border border-gray-300" placeholder="Product description"></textarea>
+                  </div>
+              </div>
+              <button type="submit" class="w-full text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                  Add product
+              </button>
+          </form>
+      </div>
+  </div>
 
 </div>
