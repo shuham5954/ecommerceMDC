@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 
 export const admin: Routes = [
     { 
-        path: '', redirectTo: 'admin-orders-details-popUp', pathMatch: 'full' 
+        path: '', redirectTo: 'admin-profile', pathMatch: 'full' 
 
     },
     {
@@ -38,7 +38,7 @@ export const admin: Routes = [
         loadComponent: () => import('./admin-help/admin-help.component').then(c => c.AdminHelpComponent)
     },
     {
-        path:'admin-adminsetting' ,
+        path:'admin-profile' ,
         loadComponent: () => import('./admin-profile-setting/admin-profile-setting.component').then(c => c.AdminProfileSettingComponent)
     },
 
