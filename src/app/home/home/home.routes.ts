@@ -4,7 +4,7 @@ export const home: Routes = [
     
     { 
         path: '', 
-        redirectTo: 'user-profiles', 
+        redirectTo: 'products', 
         pathMatch: 'full' 
     },
     
@@ -13,7 +13,7 @@ export const home: Routes = [
         children: [
             { 
                 path: '', 
-                redirectTo: 'home-products-details', 
+                redirectTo: 'home-products', 
                 pathMatch: 'full' 
             },
             { 

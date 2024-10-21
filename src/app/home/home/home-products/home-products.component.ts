@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common'; // Import CommonModule
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 
 import { CarouselComponent } from 'ngx-owl-carousel-o';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home-products',
@@ -18,6 +19,13 @@ import { CarouselComponent } from 'ngx-owl-carousel-o';
   styleUrl: './home-products.component.css'
 })
 export class HomeProductsComponent {
+
+  constructor(private router:Router){}
+
+  nextRoute(){
+    this.router.navigate(['home/products/home-products-details']);
+
+  }
 
   
 
