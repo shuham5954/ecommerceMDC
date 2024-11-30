@@ -1,8 +1,8 @@
 <div class="flex-col">
 
-<app-header></app-header>
+<app-header [ngClass]="{'hidden': !commonS.islogIn}" ></app-header>
 <div class="flex">
-    <app-nav-bar></app-nav-bar>
+    <app-nav-bar [ngClass]="{'hidden': !commonS.islogIn}" ></app-nav-bar>
     
     <router-outlet></router-outlet>
 </div>
