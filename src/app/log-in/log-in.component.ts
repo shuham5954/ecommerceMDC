@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { authService } from '../common/authService/auth.service';
+import { CommonService } from '../common/commonServices/common.service';
 
 @Component({
   selector: 'app-log-in',
@@ -11,13 +12,20 @@ import { authService } from '../common/authService/auth.service';
 })
 export class LogInComponent {
 
-  constructor(private router:Router , private authSer:authService){}
+  constructor(private router:Router , private authSer:authService , private commonS:CommonService){}
 
-  nextRoute(){
-    this.authSer.login();
+logIn() {
 
-    this.router.navigate(['/home']);
+  this.authSer.login();
 
+  this.router.navigate(['/home']);
+
+  this.commonS.userLogIn();
+  
+  if(this.commonS.isLogIn){
+    this.commonS.userLogIn();
+    console.log(this.commonS.isLogIn);  
   }
+}
 
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 
 import { Router} from '@angular/router';
@@ -15,17 +15,22 @@ import { CommonService } from './common/commonServices/common.service';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
-  constructor(private router:Router , private http:HttpClient , public commonS:CommonService){
+export class AppComponent implements OnInit  {
+  public isNavShow = false ;
 
-    console.log(commonS.islogIn);
+  constructor(private router:Router , private http:HttpClient , public commonS:CommonService){
     
-    // let data = '';
-    // this.http.post<any>('https://dummyjson.com/c/eb3d-d728-4cdf-ab19',data).subscribe((data)=>{console.log(data,'dataas');
-    // })
   }
-swichRoute() {
-this.router.navigate(['logIn'])
+  ngOnInit(): void {
+    this.getNavInfo();
+  }
+
+  getNavInfo(){
+
+    this.commonS.isLogIn.subscribe((data) =>{
+     this.isNavShow = data;
+      console.log(this.isNavShow);
+     })
+  
 }
-  title = 'ecommerceMDC';
 }
