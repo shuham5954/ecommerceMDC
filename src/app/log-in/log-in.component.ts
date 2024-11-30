@@ -1,18 +1,84 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { authService } from '../common/authService/auth.service';
 import { CommonService } from '../common/commonServices/common.service';
+import { NgClass, NgIf } from '@angular/common';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-log-in',
   standalone: true,
-  imports: [],
+  imports: [NgIf , NgClass ,ReactiveFormsModule ],
   templateUrl: './log-in.component.html',
   styleUrl: './log-in.component.css'
 })
-export class LogInComponent {
+export class LogInComponent implements OnInit {
 
-  constructor(private router:Router , private authSer:authService , private commonS:CommonService){}
+  public togglePageLogInSignUp:boolean = false;
+
+  public logInForm!: FormGroup;
+  public registrationForm!: FormGroup;
+
+  constructor(private router:Router , private authSer:authService , private commonS:CommonService){
+    
+  }
+
+  ngOnInit(){
+  
+    this.createFormBuilder();
+  }
+
+
+  createFormBuilder(){
+
+    // create validtion for logIn form 
+    this.logInForm = new FormGroup({
+      email: new FormControl('', [Validators.required, Validators.email])
+    });
+
+    // create validation for Register Page 
+    this.registrationForm = new FormGroup({
+      userName: new FormControl('', [
+        Validators.required,
+        Validators.minLength(5),
+        Validators.maxLength(25),
+        Validators.pattern('^[a-zA-Z0-9]*$')
+      ]),
+      mobile: new FormControl('', [Validators.required,
+        Validators.pattern(/^[0-9]{10}$/)]),
+      email: new FormControl('', [Validators.required, Validators.email]),
+      password: new FormControl('', [Validators.required,
+        Validators.minLength(8)]),
+    });
+
+
+  }
+
+  onSubmit(value:any) {
+
+    if(value == 'logIn'){
+
+      console.log('logIn click');
+
+      
+    if (this.logInForm.valid) {
+      console.log("log in valid");
+
+    }
+
+    }
+    
+    else if(value == 'signUp'){
+
+      if(this.registrationForm.valid){
+        
+        
+      }
+     
+
+    }
+
+  }
 
 logIn() {
 
@@ -27,5 +93,6 @@ logIn() {
     console.log(this.commonS.isLogIn);  
   }
 }
+
 
 }

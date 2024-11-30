@@ -1,13 +1,13 @@
 
 <!-- log in section  -->
 
-<section class="  bg-[#001C30] w-[100vw] h-[100vh] flex box-border justify-center items-center">
+<section [ngClass]="{'hidden': togglePageLogInSignUp}" class="hidden  bg-[#001C30] w-[100vw] h-[100vh] flex box-border justify-center items-center">
     <div class="bg-[#001C30] rounded-2xl flex max-w-3xl p-5 items-center">
         <div class="md:w-1/2 px-8">
             <h2 class="font-bold text-3xl text-[#9BCDD2]">Login</h2>
             <p class="text-sm mt-4 text-[#9BCDD2]">If you already a member, easily log in now.</p>
-            <div     class="flex flex-col gap-4">
-                <input class="p-2 mt-8 rounded-xl border" type="email" name="email" placeholder="Email">
+            <div class="flex flex-col gap-4">
+                <input class="p-2 mt-8 rounded-xl border" type="email"  placeholder="Email">
                 <div class="relative">
                     <input class="p-2 rounded-xl border w-full" type="password" name="password" id="password" placeholder="Password">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" id="togglePassword"
@@ -31,7 +31,7 @@
                         </path>
                     </svg>
                 </div>
-                <button class="bg-[#002D74] text-white py-2 rounded-xl hover:scale-105 duration-300 hover:bg-[#206ab1] font-medium" (click)="logIn()">Login</button>
+                <button class="bg-[#002D74] text-white py-2 rounded-xl hover:scale-105 duration-300 hover:bg-[#206ab1] font-medium" (click)="onSubmit('logIn') ">Login</button>
             </div>
             <div class="mt-6  items-center text-gray-100">
                 <hr class="border-gray-300">
@@ -52,7 +52,7 @@
 
             <div class="mt-4 text-sm flex justify-between items-center container-mr">
                 <p class="mr-3 md:mr-0  text-[#9BCDD2]">If you don't have an account..</p>
-                <button class="hover:border register text-white bg-[#002D74] hover:border-gray-400 rounded-xl py-2 px-5 hover:scale-110 hover:bg-[#002c7424] font-semibold duration-300">Register</button>
+                <button (click)="togglePageLogInSignUp = !togglePageLogInSignUp" class="hover:border register text-white bg-[#002D74] hover:border-gray-400 rounded-xl py-2 px-5 hover:scale-110 hover:bg-[#002c7424] font-semibold duration-300">Register</button>
             </div>
         </div>
         <div class="md:block hidden w-1/2">
@@ -63,17 +63,17 @@
 
 <!-- for create new  -->
 
-<section class="hidden bg-[#001C30] w-[100vw] h-[100vh] flex box-border justify-center items-center">
-    <div class="bg-[#001C30] rounded-2xl flex max-w-3xl p-5 items-center">
+<section [ngClass]="{'hidden': !togglePageLogInSignUp}" class=" bg-[#001C30] w-[100vw] h-[100vh] flex box-border justify-center items-center">
+    <div  class="bg-[#001C30] rounded-2xl flex max-w-3xl p-5 items-center">
         <div class="md:w-1/2 px-8">
             <h2 class="font-bold text-3xl text-[#9BCDD2]">Sign Up</h2>
             <p class="text-sm mt-4 text-[#9BCDD2]">Fill The Details</p>
-            <form action="" class="flex flex-col gap-4">
-                <input class="p-2 mt-1 rounded-xl border" type="text" name="Username" placeholder="Username">
-                <input class="p-2 mt-1 rounded-xl border" type="email" name="Mobile" placeholder="Mobile">
-                <input class="p-2 mt-1 rounded-xl border" type="email" name="Email" placeholder="Email">
+            <form [formGroup]="registrationForm" class="flex flex-col gap-4">
+                <input formControlName="userName" class="p-2 mt-1 rounded-xl border" type="text" name="Username" placeholder="Username">
+                <input formControlName="mobile" class="p-2 mt-1 rounded-xl border" type="email" name="Mobile" placeholder="Mobile">
+                <input formControlName="email" class="p-2 mt-1 rounded-xl border" type="email" name="Email" placeholder="Email">
                 <div class="relative">
-                    <input class="p-2 rounded-xl border w-full" type="password" name="password" id="password" placeholder="Password">
+                    <input formControlName="password" class="p-2 rounded-xl border w-full" type="password" name="password" id="passwordd" placeholder="Password">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" id="togglePassword"
                         class="bi bi-eye absolute top-1/2 right-3 -translate-y-1/2 cursor-pointer z-20 opacity-100"
                         viewBox="0 0 16 16">
@@ -95,7 +95,8 @@
                         </path>
                     </svg>
                 </div>
-                <button class="bg-[#002D74] text-white py-2 rounded-xl hover:scale-105 duration-300 hover:bg-[#206ab1] font-medium" type="submit">Sign Up</button>
+                <button (click)="onSubmit('signUp')" class="bg-[#002D74] text-white py-2 rounded-xl hover:scale-105 duration-300 hover:bg-[#206ab1] font-medium" >Sign Up</button>
+                <button (click)="togglePageLogInSignUp = !togglePageLogInSignUp" class="bg-[#002D74] text-white py-2 rounded-xl hover:scale-105 duration-300 hover:bg-[#206ab1] font-medium" >Back To Log-In</button>
             </form>
             <div class="mt-6  items-center text-gray-100">
                 <hr class="border-gray-300">
