@@ -72,7 +72,7 @@
 
 <!-- vector three line mobile screen menu  -->
 
-<div class="w[100px] bg-[#001C30] rounded-md p-4 flex sm:hidden ">
+<div class="w[100px] bg-[#001C30] rounded-md p-4 flex sm:hidden " (click)="toggleMobMenu()">
 
     <svg width="25" height="20" viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M0 1.30435C0 0.958413 0.141103 0.626647 0.392268 0.382034C0.643433 0.137422 0.984085 0 1.33929 0H23.6607C24.0159 7.29003e-09 24.3566 0.137422 24.6077 0.382034C24.8589 0.626647 25 0.958413 25 1.30435C25 1.65028 24.8589 1.98205 24.6077 2.22666C24.3566 2.47127 24.0159 2.6087 23.6607 2.6087H1.33929C0.984085 2.6087 0.643433 2.47127 0.392268 2.22666C0.141103 1.98205 0 1.65028 0 1.30435ZM0 10C0 9.65407 0.141103 9.3223 0.392268 9.07769C0.643433 8.83307 0.984085 8.69565 1.33929 8.69565H12.5H23.6607C24.0159 8.69565 24.3566 8.83307 24.6077 9.07769C24.8589 9.3223 25 9.65407 25 10C25 10.3459 24.8589 10.6777 24.6077 10.9223C24.3566 11.1669 24.0159 11.3043 23.6607 11.3043H12.5H1.33929C0.984085 11.3043 0.643433 11.1669 0.392268 10.9223C0.141103 10.6777 0 10.3459 0 10ZM1.33929 17.3913H23.6607C24.0159 17.3913 24.3566 17.5287 24.6077 17.7733C24.8589 18.018 25 18.3497 25 18.6957C25 19.0416 24.8589 19.3734 24.6077 19.618C24.3566 19.8626 24.0159 20 23.6607 20H1.33929C0.984085 20 0.643433 19.8626 0.392268 19.618C0.141103 19.3734 0 19.0416 0 18.6957C0 18.3497 0.141103 18.018 0.392268 17.7733C0.643433 17.5287 0.984085 17.3913 1.33929 17.3913Z" fill="#9BCDD2"/>
@@ -87,11 +87,11 @@
 <!-- for mobile right navbar  -->
   
   <!-- Side navigation menu -->
-  <div  
+  <div  [ngClass]="{'hidden': showMobMenu}"
     class="fixed top-0 right-0 h-full hidden w-64 bg-teal-200 transform transition-transform duration-300 ease-in-out">
     <div class="flex justify-between items-center p-4">
       <h2 class="text-xl font-semibold">MENU</h2>
-      <button class="text-xl">&times;</button>
+      <button class="text-xl" (click)="toggleMobMenu()">&times;</button>
     </div>
     <div class="px-6 py-4">
       <div class="font-bold text-lg mb-2">MEN</div>

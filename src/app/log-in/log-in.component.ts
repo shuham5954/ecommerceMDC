@@ -59,12 +59,18 @@ export class LogInComponent implements OnInit {
     if(value == 'logIn'){
 
       console.log('logIn click');
+      this.authSer.login();
+      // this.router.navigate([]);
+      this.router.navigate(['/home']);
 
       
-    if (this.logInForm.valid) {
-      console.log("log in valid");
+    // if (this.logInForm.valid) {
+    //   // admin
+    //   console.log("log in valid");
+    //   this.router.navigate(['/admin']);
+    //   // this.router.navigate(['/log-in']);
 
-    }
+    // }
 
     }
     
