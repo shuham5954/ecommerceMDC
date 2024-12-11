@@ -87,8 +87,8 @@
 <!-- for mobile right navbar  -->
   
   <!-- Side navigation menu -->
-  <div  [ngClass]="{'hidden': showMobMenu}"
-    class="fixed top-0 right-0 h-full hidden w-64 bg-teal-200 transform transition-transform duration-300 ease-in-out">
+  <div  [ngClass]="{'hidden': !showMobMenu}"
+    class="fixed z-50 top-0 right-0 h-full hidden w-64 bg-teal-200 transform transition-transform duration-300 ease-in-out">
     <div class="flex justify-between items-center p-4">
       <h2 class="text-xl font-semibold">MENU</h2>
       <button class="text-xl" (click)="toggleMobMenu()">&times;</button>

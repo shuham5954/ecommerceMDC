@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 
 import { Router} from '@angular/router';
@@ -7,6 +7,7 @@ import { HeaderComponent } from "./header/header/header.component";
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgClass, NgIf } from '@angular/common';
 import { CommonService } from './common/commonServices/common.service';
+import { HttpService } from './common/commonServices/http.service';
 
 @Component({
   selector: 'app-root',
@@ -18,9 +19,10 @@ import { CommonService } from './common/commonServices/common.service';
 export class AppComponent implements OnInit  {
   public isNavShow = false ;
 
-  constructor(private router:Router , private http:HttpClient , public commonS:CommonService){
+  constructor( public commonS:CommonService ){
     
   }
+ 
   ngOnInit(): void {
     this.getNavInfo();
   }

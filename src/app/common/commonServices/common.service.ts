@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, interval } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +11,8 @@ export class CommonService {
   private isLogInSubject = new BehaviorSubject<boolean>(false);
   isLogIn = this.isLogInSubject.asObservable();
   
-  constructor() { }
+  constructor() { 
+  }
 
    userLogIn(){
     this.isLogInSubject.next(true);
@@ -25,5 +26,6 @@ export class CommonService {
 
     
    }
+
 
 }

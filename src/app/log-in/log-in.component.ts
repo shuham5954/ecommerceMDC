@@ -4,6 +4,7 @@ import { authService } from '../common/authService/auth.service';
 import { CommonService } from '../common/commonServices/common.service';
 import { NgClass, NgIf } from '@angular/common';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { HttpService } from '../common/commonServices/http.service';
 
 @Component({
   selector: 'app-log-in',
