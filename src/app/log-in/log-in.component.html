@@ -6,10 +6,10 @@
         <div class="md:w-1/2 px-8">
             <h2 class="font-bold text-3xl text-[#9BCDD2]">Login</h2>
             <p class="text-sm mt-4 text-[#9BCDD2]">If you already a member, easily log in now.</p>
-            <div class="flex flex-col gap-4">
-                <input class="p-2 mt-8 rounded-xl border" type="email"  placeholder="Email">
+            <form [formGroup]="logInForm" class="flex flex-col gap-4">
+                <input formControlName="email" class="p-2 mt-8 rounded-xl border" type="email"  placeholder="Email">
                 <div class="relative">
-                    <input class="p-2 rounded-xl border w-full" type="password" name="password" id="password" placeholder="Password">
+                    <input formControlName="password" class="p-2 rounded-xl border w-full" type="password" name="password" id="password" placeholder="Password">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" id="togglePassword"
                         class="bi bi-eye absolute top-1/2 right-3 -translate-y-1/2 cursor-pointer z-20 opacity-100"
                         viewBox="0 0 16 16">
@@ -32,7 +32,7 @@
                     </svg>
                 </div>
                 <button class="bg-[#002D74] text-white py-2 rounded-xl hover:scale-105 duration-300 hover:bg-[#206ab1] font-medium" (click)="onSubmit('logIn') ">Login</button>
-            </div>
+            </form>
             <div class="mt-6  items-center text-gray-100">
                 <hr class="border-gray-300">
                 <p class="text-center text-sm">OR</p>
@@ -69,8 +69,8 @@
             <h2 class="font-bold text-3xl text-[#9BCDD2]">Sign Up</h2>
             <p class="text-sm mt-4 text-[#9BCDD2]">Fill The Details</p>
             <form [formGroup]="registrationForm" class="flex flex-col gap-4">
-                <input formControlName="userName" class="p-2 mt-1 rounded-xl border" type="text" name="Username" placeholder="Username">
-                <input formControlName="mobile" class="p-2 mt-1 rounded-xl border" type="email" name="Mobile" placeholder="Mobile">
+                <input formControlName="user_name" class="p-2 mt-1 rounded-xl border" type="text" name="Username" placeholder="Username">
+                <input formControlName="phone_number" class="p-2 mt-1 rounded-xl border" type="number" name="Mobile" placeholder="Mobile">
                 <input formControlName="email" class="p-2 mt-1 rounded-xl border" type="email" name="Email" placeholder="Email">
                 <div class="relative">
                     <input formControlName="password" class="p-2 rounded-xl border w-full" type="password" name="password" id="passwordd" placeholder="Password">
